@@ -35,7 +35,6 @@ char *concat_list(struct node *head) {
     current = current->next;
   }
   buffer[index] = '\0';
-
   return buffer;
 }
 
@@ -43,16 +42,19 @@ char *concat_list(struct node *head) {
 enum error evaluate(char *string)
 {
   int i;
+  int fo = 0;
+  int so = 0;
   int result = 0; 
   char op = '+';  
   int num = 0; 
   
   for (i = 0; i < strlen(string); i++) {
     char c = string[i];
-    if (c >= '0' && c <= '999') {  
-      num = num * 10 + (c - '0');  
+    if (c >= '0' && c <= '9') {  
+      num = num * 10 + (c - '0'); 
     }
     else {  
+      int fo = num;
       if (op == '+') {
         result += num;
       }
@@ -69,6 +71,14 @@ enum error evaluate(char *string)
       num = 0;  
     }
   }
+  
+  so = num;
+
+  if (!so)
+  { 
+      printf("No second operand present\n");
+      return E_FAILURE;
+  }
 
   // Apply the last operator to the result
   if (op == '+') {
@@ -84,7 +94,7 @@ enum error evaluate(char *string)
     result /= num;
   }
 
-  printf("The result is: %d\n", result);
+  printf("The Success Value is: %d\n", result);
   if(result)
   {
     return E_SUCCESS;
@@ -100,7 +110,6 @@ int main() {
   head->next->next  = create_node('5');
   head->next->next->next  = create_node('+');
   head->next->next->next->next = create_node('5');
-
 
   // Concatenate the elements of the linked list
   char *equation = concat_list(head);
@@ -120,4 +129,3 @@ int main() {
 
   return 0;
 }
-
