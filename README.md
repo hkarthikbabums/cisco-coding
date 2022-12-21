@@ -5,10 +5,9 @@
 ```sh
 1->4->5->+->5->NULL
 
-The design is to come up with a linked list as above and treat the values
-before an operator as first operand by concatenating them and the values
-after the operator hit as send operand, then evaluate the first operand 
-and second operand based on the received arithmetic operator.
+The design is to come up with a linked list as above and treat the values before an operator as 
+first operand by concatenating them and the values after the operator hit as second operand, 
+then evaluate the first operand and second operand based on the received arithmetic operator.
 
 Positive:
 
