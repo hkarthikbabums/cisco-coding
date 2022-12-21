@@ -6,6 +6,8 @@ The design is to come up with a linked list as above and treat the values before
 
 Positive:
 
+1->4->5->+->5->NULL
+
 145 concatenated to become the first operand
 + is the arithmetic operator 
 5 is concatenated second operand
