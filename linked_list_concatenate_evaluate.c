@@ -89,16 +89,17 @@ enum error evaluate(char *string)
   {
     return E_SUCCESS;
   } else {
-      return E_FAILURE;
+    return E_FAILURE;
   }
 }
 
 int main() {
     
-  struct node *head = create_node('9');
-  head->next = create_node('9');
-  head->next->next  = create_node('+');
-  head->next->next->next = create_node('2');
+  struct node *head = create_node('1');
+  head->next = create_node('4');
+  head->next->next  = create_node('5');
+  head->next->next->next  = create_node('+');
+  head->next->next->next->next = create_node('5');
 
 
   // Concatenate the elements of the linked list
