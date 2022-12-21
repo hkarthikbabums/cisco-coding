@@ -5,8 +5,9 @@
 The design is to come up with a linked list as above and treat the values before an operator as first operand by concatenating them and the values after the operator hit as send operand, then evaluate the first operand and second operand based on the received arithmetic operator.
 
 145 concatenated to become the first operand
++ is the arithmetic operator 
+5 is concatenated second operand
 
-is the arithmetic operator 5 is concatenated second operand
 Output of the code:
 
 Equation: 145+5 
