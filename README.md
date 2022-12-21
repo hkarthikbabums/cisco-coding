@@ -1,5 +1,8 @@
-# cisco-coding
+# Cisco Coding Excercise
+## _Problem Description with Outputs_
 
+
+```sh
 1->4->5->+->5->NULL
 
 The design is to come up with a linked list as above and treat the values before an operator as first operand by concatenating them and the values after the operator hit as send operand, then evaluate the first operand and second operand based on the received arithmetic operator.
@@ -33,3 +36,5 @@ Result: -1 >> this is enum value for the failure
 Limitation: 
 
 This works only for char value as the linked list element value.
+
+```
